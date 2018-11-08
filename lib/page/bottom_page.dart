@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/page/life_cycle_page.dart';
 import 'package:flutter_demo/page/oil_list_page.dart';
 import 'package:flutter_demo/page/review_images_page.dart';
 
@@ -81,10 +82,11 @@ class BottomState extends State<BottomPage> {
         'https://upload-images.jianshu.io/upload_images/1913040-4470e7e9bf4328e2.png',
         'https://upload-images.jianshu.io/upload_images/1913040-f9a51ca5e5142672.png'
       ]),
-      new ReviewImagesPage([
-        'https://upload-images.jianshu.io/upload_images/1913040-4470e7e9bf4328e2.png',
-        'https://upload-images.jianshu.io/upload_images/1913040-f9a51ca5e5142672.png'
-      ]),
+//      new ReviewImagesPage([
+//        'https://upload-images.jianshu.io/upload_images/1913040-4470e7e9bf4328e2.png',
+//        'https://upload-images.jianshu.io/upload_images/1913040-f9a51ca5e5142672.png'
+//      ]),
+      LifeCyclePage(),
     ];
   }
 
