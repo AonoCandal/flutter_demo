@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/calendar_page.dart';
+import 'package:flutter_demo/page/empty_layout_page.dart';
 import 'package:flutter_demo/page/home_page.dart';
 import 'package:flutter_demo/page/image_page.dart';
 import 'package:flutter_demo/page/life_cycle_page.dart';
 import 'package:flutter_demo/page/list_in_list_page.dart';
 import 'package:flutter_demo/page/my_home_page.dart';
+import 'package:flutter_demo/page/progress_dialog_page.dart';
 
 import 'page/letterpage.dart';
 
@@ -28,6 +30,8 @@ class MyApp extends StatelessWidget {
         '/lifecycle': (_) => new LifeCyclePage(),
         '/calendar': (_) => new CalendarPage(),
         '/ListinList': (_) => new ListInListPage(),
+        '/EmptyLayout': (_) => new EmptyLayoutPage(),
+        '/ProgressDialog': (_) => new ProgressDialogPage(),
       },
     );
   }

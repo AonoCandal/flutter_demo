@@ -97,6 +97,8 @@ class HomeState extends State<HomePage> implements NotifyListener {
                 _buildButton("lifeCycle", '/lifecycle'),
                 _buildButton("calendar", '/calendar'),
                 _buildButton("ListInList", '/ListinList'),
+                _buildButton("EmptyLayout", '/EmptyLayout'),
+                _buildButton("ProgressDialog", '/ProgressDialog'),
               ],
             )
           ],
