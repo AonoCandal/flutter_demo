@@ -149,40 +149,40 @@ class ProgressCenterContentState extends State<ProgressCenterContent>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Center(
-        child: Container(
-          height: widget.sideLength,
-          width: widget.sideLength,
-          decoration: BoxDecoration(
-              color: widget.bgColor, borderRadius: BorderRadius.circular(10.0)),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              SizedBox(
-                height: widget.iconSize,
-                width: widget.iconSize,
-                child: widget.icon == null
-                    ? CustomPaint(
-                        painter: _CupertinoActivityIndicatorPainter(
-                          position: _controller,
-                          radius: widget.iconSize / 2,
-                        ),
-                      )
-                    : widget.icon,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8.0),
+    return Center(
+      child: Container(
+        height: widget.sideLength,
+        width: widget.sideLength,
+        decoration: BoxDecoration(
+            color: widget.bgColor, borderRadius: BorderRadius.circular(10.0)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            SizedBox(
+              height: widget.iconSize,
+              width: widget.iconSize,
+              child: widget.icon == null
+                  ? CustomPaint(
+                      painter: _CupertinoActivityIndicatorPainter(
+                        position: _controller,
+                        radius: widget.iconSize / 2,
+                      ),
+                    )
+                  : widget.icon,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: Material(
+                type: MaterialType.transparency,
                 child: Text(
                   widget.loadingText ?? _kDefaultLoadingText,
                   style: _kDefaultLoadingTextStyle,
                 ),
-              )
-            ],
-          ),
+              ),
+            )
+          ],
         ),
       ),
     );

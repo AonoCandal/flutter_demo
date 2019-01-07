@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/widget/progress_dialog.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
 class ProgressDialogPage extends StatefulWidget {
   @override
@@ -27,7 +26,6 @@ class ProgressDialogState extends State<ProgressDialogPage>
           children: <Widget>[
             buildButton('加载2秒钟, 弹出成功文案', _click2SecondSuccess),
             buildButton('加载2秒钟, 弹出失败文案', _click2SecondFailed),
-            buildButton('添加View', _click2addView),
           ],
         ),
       ),
@@ -44,10 +42,7 @@ class ProgressDialogState extends State<ProgressDialogPage>
   /// 加载2秒钟, 弹出成功文案
   void _click2SecondSuccess() {
     ProgressDialog.showProgressDialog(
-        context: context,
-        future: Future.delayed(Duration(seconds: 2), () {
-          Fluttertoast.showToast(msg: '成功', gravity: ToastGravity.CENTER);
-        }));
+        context: context, future: Future.delayed(Duration(seconds: 2)));
   }
 
   /// 加载2秒钟, 弹出失败Toast
@@ -60,17 +55,5 @@ class ProgressDialogState extends State<ProgressDialogPage>
           size: 28.0,
           color: Colors.white,
         ));
-  }
-
-  /// 添加View
-  void _click2addView() {
-    Stack(
-      children: <Widget>[
-        context.widget,
-        Center(
-          child: Text('sss'),
-        )
-      ],
-    );
   }
 }
