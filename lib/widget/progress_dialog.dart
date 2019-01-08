@@ -25,7 +25,7 @@ const String _kDefaultLoadingText = '正在加载';
 
 /// 默认加载文案style
 const TextStyle _kDefaultLoadingTextStyle =
-TextStyle(color: Colors.white, fontSize: 15.0);
+    TextStyle(color: Colors.white, fontSize: 15.0);
 
 class ProgressDialog {
   /// 显示正在加载弹窗
@@ -205,11 +205,11 @@ class ProgressCenterContentState extends State<ProgressCenterContent>
               width: widget.iconSize,
               child: widget.icon == null
                   ? CustomPaint(
-                painter: _CupertinoActivityIndicatorPainter(
-                  position: _controller,
-                  radius: widget.iconSize / 2,
-                ),
-              )
+                      painter: _CupertinoActivityIndicatorPainter(
+                        position: _controller,
+                        radius: widget.iconSize / 2,
+                      ),
+                    )
                   : widget.icon,
             ),
             Padding(
@@ -235,12 +235,12 @@ class _CupertinoActivityIndicatorPainter extends CustomPainter {
     this.position,
     double radius,
   })  : tickFundamentalRRect = RRect.fromLTRBXY(
-      -radius,
-      1.0 * radius / _kDefaultIndicatorRadius,
-      -radius / 2.0,
-      -1.0 * radius / _kDefaultIndicatorRadius,
-      1.0,
-      1.0),
+            -radius,
+            1.0 * radius / _kDefaultIndicatorRadius,
+            -radius / 2.0,
+            -1.0 * radius / _kDefaultIndicatorRadius,
+            1.0,
+            1.0),
         super(repaint: position);
 
   final Animation<double> position;
@@ -257,7 +257,7 @@ class _CupertinoActivityIndicatorPainter extends CustomPainter {
 
     for (int i = 0; i < _kTickCount; ++i) {
       final double t =
-      (((i + activeTick) % _kTickCount) / _kHalfTickCount).clamp(0.0, 1.0);
+          (((i + activeTick) % _kTickCount) / _kHalfTickCount).clamp(0.0, 1.0);
       paint.color = Color.lerp(_kActiveTickColor, _kTickColor, t);
       canvas.drawRRect(tickFundamentalRRect, paint);
       canvas.rotate(-_kTwoPI / _kTickCount);

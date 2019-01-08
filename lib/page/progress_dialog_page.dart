@@ -11,7 +11,7 @@ class ProgressDialogPage extends StatefulWidget {
   }
 }
 
-class ProgressDialogState extends State<ProgressDialogPage>{
+class ProgressDialogState extends State<ProgressDialogPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,14 +22,14 @@ class ProgressDialogState extends State<ProgressDialogPage>{
         children: [
           _listItem(
               '加载2秒钟',
-                  () => ProgressDialog.showProgressDialog(
+              () => ProgressDialog.showProgressDialog(
                   context: context,
                   future: Future.delayed(Duration(seconds: 2)))),
           _listItem('弹出成功状态2秒钟',
-                  () => ProgressDialog.showSuccessDialog(context: context)),
+              () => ProgressDialog.showSuccessDialog(context: context)),
           _listItem(
               '弹出自定义状态弹框',
-                  () => ProgressDialog.showStateDialog(
+              () => ProgressDialog.showStateDialog(
                   context: context,
                   loadingText: '警告',
                   icon: Icon(
@@ -39,23 +39,23 @@ class ProgressDialogState extends State<ProgressDialogPage>{
                   ))),
           _listItem(
               '加载2秒钟之后弹出成功',
-                  () => ProgressDialog.showProgressDialog(
-                context: context,
-                future: Future.delayed(Duration(seconds: 2)).then((value) {
-                  ProgressDialog.showSuccessDialog(context: context);
-                }),
-              )),
+              () => ProgressDialog.showProgressDialog(
+                    context: context,
+                    future: Future.delayed(Duration(seconds: 2)).then((value) {
+                      ProgressDialog.showSuccessDialog(context: context);
+                    }),
+                  )),
           _listItem(
               '加载2秒钟之后弹出失败',
-                  () => ProgressDialog.showProgressDialog(
-                context: context,
-                future: Future.delayed(Duration(seconds: 2)).then((value) {
-                  ProgressDialog.showFailDialog(context: context);
-                }),
-              )),
+              () => ProgressDialog.showProgressDialog(
+                    context: context,
+                    future: Future.delayed(Duration(seconds: 2)).then((value) {
+                      ProgressDialog.showFailDialog(context: context);
+                    }),
+                  )),
           _listItem(
               '异步加载并随机捕获错误(仿实际使用)',
-                  () => ProgressDialog.showProgressDialog(
+              () => ProgressDialog.showProgressDialog(
                   context: context,
                   future: Future.delayed(Duration(seconds: 2), () {
                     Random r = Random();
