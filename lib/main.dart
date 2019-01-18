@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/calendar_page.dart';
 import 'package:flutter_demo/page/empty_layout_page.dart';
+import 'package:flutter_demo/page/empty_view_page.dart';
 import 'package:flutter_demo/page/home_page.dart';
 import 'package:flutter_demo/page/image_page.dart';
 import 'package:flutter_demo/page/life_cycle_page.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/ListinList': (_) => new ListInListPage(),
         '/EmptyLayout': (_) => new EmptyLayoutPage(),
         '/ProgressDialog': (_) => new ProgressDialogPage(),
+        '/EmptyView': (_) => new EmptyViewPage(),
       },
     );
   }
