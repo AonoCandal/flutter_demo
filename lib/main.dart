@@ -8,32 +8,38 @@ import 'package:flutter_demo/page/life_cycle_page.dart';
 import 'package:flutter_demo/page/list_in_list_page.dart';
 import 'package:flutter_demo/page/my_home_page.dart';
 import 'package:flutter_demo/page/progress_dialog_page.dart';
+import 'package:flutter_demo/page/pull_to_refresh/pull_to_refresh_page.dart';
+import 'package:flutter_demo/page/search_page.dart';
+import 'package:flutter_demo/page/search_page_2.dart';
 
 import 'page/letterpage.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new HomePage(),
+      home: HomePage(),
       routes: <String, WidgetBuilder>{
-        '/a': (_) => new ImagePage(),
-        '/b': (_) => new LetterPage("B"),
-        '/c': (_) => new LetterPage("C"),
-        '/home': (_) => new HomePage(),
-        '/myhome': (_) => new MyHomePage(title: 'lalalla'),
-        '/lifecycle': (_) => new LifeCyclePage(),
-        '/calendar': (_) => new CalendarPage(),
-        '/ListinList': (_) => new ListInListPage(),
-        '/EmptyLayout': (_) => new EmptyLayoutPage(),
-        '/ProgressDialog': (_) => new ProgressDialogPage(),
-        '/EmptyView': (_) => new EmptyViewPage(),
+        '/a': (_) => ImagePage(),
+        '/b': (_) => LetterPage("B"),
+        '/c': (_) => LetterPage("C"),
+        '/home': (_) => HomePage(),
+        '/myhome': (_) => MyHomePage(title: 'lalalla'),
+        '/lifecycle': (_) => LifeCyclePage(),
+        '/calendar': (_) => CalendarPage(),
+        '/ListinList': (_) => ListInListPage(),
+        '/EmptyLayout': (_) => EmptyLayoutPage(),
+        '/ProgressDialog': (_) => ProgressDialogPage(),
+        '/EmptyView': (_) => EmptyViewPage(),
+        '/pullToRefresh': (_) => PullToRefreshPage(),
+        '/searchPage': (_) => SearchPage(),
+        '/searchPage2': (_) => SearchPage2(),
       },
     );
   }

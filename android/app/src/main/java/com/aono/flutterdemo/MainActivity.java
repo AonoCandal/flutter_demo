@@ -7,8 +7,6 @@ import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 
-import junit.runner.Version;
-
 import io.flutter.app.FlutterActivity;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
